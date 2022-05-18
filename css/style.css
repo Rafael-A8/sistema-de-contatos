@@ -1,3 +1,6 @@
+@import url("../agenda.php");
+@import url("../cadastro.php");
+
 body {
     background-color: #f0f0f0;
     font-family: sans-serif;
@@ -43,4 +46,12 @@ form {
 
 .btn button:hover {
     background-color: blue;
+}
+
+.list-group-item {
+    outline: 0px;
+}
+
+.app {
+	margin-top: 25px;
 }

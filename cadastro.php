@@ -1,10 +1,3 @@
-<?php
-
-require 'conexao.php'
-
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -28,8 +21,18 @@ require 'conexao.php'
 				</a>
 			</div>
 		</nav>
+        <br>
+        <div class="container app">
+			<div class="row">
+				<div class="col-sm-3 menu">
+					<ul class="list-group">
+						<li class="list-group-item"><a href="cadastro.php">NOVO CADASTRO</a></li>
+						<li class="list-group-item"><a href="agenda.php">TODOS OS CADASTROS</a></li>
+					</ul>
+				</div>
+            </div>
 
-        <form action="#" class="form" method="POST">
+        <form action="agenda.php" class="form" method="POST">
         <div class="caixa">
                 <div class="card-top">
                 <img src="#" alt="">
@@ -39,7 +42,7 @@ require 'conexao.php'
             </br>
             <div class="caixa-grup">
                 <label for="nome">Nome</label>
-                <input type="text" name="email" placeholder="Digite seu nome" required>
+                <input type="text" name="nome" placeholder="Digite seu nome" required>
             </div>
             </br>
             <div class="caixa-grup">
