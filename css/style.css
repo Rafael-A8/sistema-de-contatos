@@ -56,3 +56,6 @@ form {
 	margin-top: 25px;
 }
 
+.table-bg {
+    background: rgba(red, green, blue, 0.5);
+}
