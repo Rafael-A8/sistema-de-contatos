@@ -1,6 +1,6 @@
 <?php
-    //require "contato.service.php";
-    require "includes/conexao.php";
+    
+require "includes/conexao.php";
 
     $nome = $_POST['nome'];
     $email = $_POST['email'];
@@ -17,3 +17,5 @@
     $query = $conexao->prepare($sql);
 
     $query->execute($campos);
+
+header('location: index.php');

@@ -1,6 +1,6 @@
-<?php include('includes/conexao.php') ?>
 
 <?php
+include('includes/conexao.php');
 
 if(!empty($_GET['id'])) 
 {
