@@ -31,8 +31,10 @@
                 <ul class="list-group">
                     <li class="list-group-item"><a href="cadastro.php">NOVO CADASTRO</a></li>
                     <li class="list-group-item"><a href="index.php">TODOS OS CADASTROS</a></li>
+                    <li class="list-group-item"><a href="cadastro.cat.php">INSERIR CATEGORIA</a></li>
+                    <li class="list-group-item"><a href="categoria.php">CATEGORIAS</a></li>
                 </ul>
             </div>
 
             <div class="col-sm-9">
-                <div class="container pagina">
+                <div class="pagina">

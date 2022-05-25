@@ -1,5 +1,6 @@
 @import url("../agenda.php");
 @import url("../cadastro.php");
+@import url("../includes/header.php");
 
 body {
     background-color: #f0f0f0;
@@ -42,6 +43,11 @@ form {
     color: white;
     border: 0px;
     outline: 0px;
+}
+
+.caixa-pesquisa {
+    display: flex;
+    
 }
 
 .btn button:hover {
