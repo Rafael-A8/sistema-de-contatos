@@ -12,7 +12,7 @@ $user = $sql->fetchAll();
 <div class="row">
   <div class="col">
     <h4>TODOS OS CONTATOS</h4>
-    <table class="table table-bg">
+    <table class="table table table-hover">
       <thead>
         <tr>
           <th scope="col">#</th>
