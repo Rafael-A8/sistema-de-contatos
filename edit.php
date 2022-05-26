@@ -44,7 +44,23 @@ if(!empty($_GET['id']))
                     <input type="number" name="phone" value="<?php echo $result['phone']?>" placeholder="Digite seu nome" required>
                 </div>
                 </br>
+                <div class="">
+                <select name="#" id="#" required>
+                    <option value="">Selecione...</option>
+                    <?php
+                        $sql = $conexao->query("SELECT * FROM tb_categorias ORDER BY id DESC");
+                        $select = $sql->fetchAll();
+                        
+                        foreach ($select as $row) {
+                        ?>
 
+                            <option><?php echo $row['nome'] ?></option>
+
+                        <?php
+                        }
+                        ?>
+                </select>
+                </div>
                 <div class="caixa-grup btn">
                     <button type="submit">ATUALIZAR</button>
                 </div>

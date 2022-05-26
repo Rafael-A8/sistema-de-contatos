@@ -1,3 +1,5 @@
+<?php include('includes/conexao.php');?>
+
 <?php include('includes/header.php'); ?>
 
                     <form action="controller.php" class="form" method="POST">
@@ -19,9 +21,26 @@
                             </br>
                             <div class="caixa-grup">
                                 <label for="phone">Telefone</label>
-                                <input type="number" name="phone" placeholder="Digite seu nome" required>
+                                <input type="number" name="phone" placeholder="Digite seu Telefone" required>
                             </div>
                             </br>
+                            <div class="caixa-grup">
+                                <select name="#" id="#" required>
+                                    <option value="">Selecione...</option>
+                                    <?php
+                                        $sql = $conexao->query("SELECT * FROM tb_categorias ORDER BY id DESC");
+                                        $select = $sql->fetchAll();
+                                        
+                                        foreach ($select as $row) {
+                                        ?>
+
+                                            <option><?php echo $row['nome'] ?></option>
+
+                                        <?php
+                                        }
+                                       ?>
+                                </select>
+                            </div>
                             <div class="caixa-grup btn">
                                 <button type="submit">CADASTRAR</button>
                             </div>
