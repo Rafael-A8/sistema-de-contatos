@@ -1,6 +1,4 @@
-@import url("../agenda.php");
-@import url("../cadastro.php");
-@import url("../includes/header.php");
+
 
 body {
     background-color: #f0f0f0;
@@ -34,6 +32,14 @@ form {
     height: 30px;
     padding: 5px;
 }
+
+.caixa-grup .sel {
+    border-radius: 5px;
+    width: 50%;
+    height: 30px;
+    outline: 0;
+    align-self: left;
+}   
 
 .caixa-grup >button {
     background-color: #dc3545;

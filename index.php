@@ -2,7 +2,7 @@
 //Rafael Alvarino
 include('includes/conexao.php');
 
-$sql = $conexao->query("SELECT * FROM tb_usuarios ORDER BY id DESC");
+$sql = $conexao->query("SELECT * FROM tb_usuarios AS U INNER JOIN tb_categorias AS C ON U.categoria_id = C.id");
 $user = $sql->fetchAll();
 
 ?>
@@ -12,13 +12,14 @@ $user = $sql->fetchAll();
 <div class="row">
   <div class="col">
     <h4>TODOS OS CONTATOS</h4>
-    <table class="table table table-hover">
+    <table class="table table-borderless table-bordered table-striped table-hover">
       <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Nome</th>
           <th scope="col">E-amil</th>
           <th scope="col">Telefone</th>
+          <th scope="col">Categ</th>
           <th scope="col">Alteraçoes</th>
         </tr>
       </thead>
@@ -31,6 +32,7 @@ $user = $sql->fetchAll();
             <td><?php echo $row['nome'] ?></td>
             <td><?php echo $row['email'] ?></td>
             <td><?php echo $row['phone'] ?></td>
+            <td><?php echo $row['cat_nome'] ?></td>
             <td>
 
               <a class='btn btn-sm btn-primary' href='edit.php?id=<?php echo $row['id'] ?>'>

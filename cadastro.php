@@ -25,7 +25,7 @@
                             </div>
                             </br>
                             <div class="caixa-grup">
-                                <select name="#" id="#" required>
+                                <select class="sel" name="#" id="#" required>
                                     <option value="">Selecione...</option>
                                     <?php
                                         $sql = $conexao->query("SELECT * FROM tb_categorias ORDER BY id DESC");
@@ -33,9 +33,7 @@
                                         
                                         foreach ($select as $row) {
                                         ?>
-
-                                            <option><?php echo $row['nome'] ?></option>
-
+                                            <option><?php echo $row['cat_nome'] ?></option>
                                         <?php
                                         }
                                        ?>

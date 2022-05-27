@@ -53,9 +53,7 @@ if(!empty($_GET['id']))
                         
                         foreach ($select as $row) {
                         ?>
-
-                            <option><?php echo $row['nome'] ?></option>
-
+                            <option><?php echo $row['cat_nome'] ?></option>
                         <?php
                         }
                         ?>

@@ -16,7 +16,7 @@ include('includes/conexao.php');
             <h2><strong>Faça aqui suas Alterações da Categoria</strong></h2>
                 <br>
             <div class="caixa-grup">               
-                <input type="text" name="nome" value="<?php echo $result['nome']?>" placeholder="Digite sua Alteração" required>
+                <input type="text" name="cat_nome" value="<?php echo $result['cat_nome']?>" placeholder="Digite sua Alteração" required>
             </div>
             <div class="caixa-grup btn">
                 <button type="submit">ATUALIZAR</button>

@@ -7,7 +7,7 @@
             </div>
                 <br>
             <div class="caixa-grup">
-                <input type="text" name="nome" placeholder="Digite aqui a sua Categoria!!" required>
+                <input type="text" name="cat_nome" placeholder="Digite aqui a sua Categoria!!" required>
             </div>
             <br>
             <div class="caixa-grup btn">

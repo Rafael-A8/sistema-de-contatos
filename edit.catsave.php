@@ -3,15 +3,15 @@
 include('includes/conexao.php');
 
     $id = $_POST['id'];
-    $nome = $_POST['nome'];
+    $nome = $_POST['cat_nome'];
 
 $alt = [
     'id' => $id,
-    'nome' => $nome
+    'cat_nome' => $nome
 
 ];
 
-$sql = "UPDATE tb_categorias SET nome=:nome WHERE id=:id";
+$sql = "UPDATE tb_categorias SET cat_nome=:nome WHERE id=:id";
 $sqlAlter = $conexao->prepare($sql);
 $sqlAlter->execute($alt);
 

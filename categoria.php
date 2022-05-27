@@ -11,8 +11,8 @@ $result = $sql->fetchAll();
 <div class="row">
     <div class="col">
         <h4>LISTA DE CATEGORIAS</h4>
-        <table class="table table-borderless">
-            <thead class="table-dark">
+        <table class="table table-borderless table-bordered table-striped table-hover">
+            <thead>
                 <tr>
                     <th scope="col">id</th>
                     <th scope="col">Categorias</th>
@@ -24,7 +24,7 @@ $result = $sql->fetchAll();
                 ?>
                     <tr>
                         <td><?php echo $row['id'] ?></td>
-                        <td><?php echo $row['nome'] ?></td>
+                        <td><?php echo $row['cat_nome'] ?></td>
                         <td>
 
                             <a class='btn btn-sm btn-primary' href='edit.cat.php?id=<?php echo $row['id'] ?>'>
