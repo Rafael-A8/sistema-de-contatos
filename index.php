@@ -3,7 +3,7 @@
 include('includes/conexao.php');
 
 $sql = $conexao->query("SELECT U.*, C.cat_nome FROM tb_usuarios AS U
-                        INNER JOIN tb_categorias AS C ON U.categoria_id = C.id");
+                        LEFT JOIN tb_categorias AS C ON U.categoria_id = C.id");
 $user = $sql->fetchAll();
 
 ?>

@@ -31,12 +31,12 @@
                             </br>
                             <div class="caixa-grup">
                                 <label for="cpf">CPF</label>
-                                <input type="text" name="cpf" max="20" placeholder="Digite seu CPF" required>
+                                <input type="text" name="cpf" size="20" placeholder="Digite seu CPF" required>
                             </div>
                             </br>
                             <div class="caixa-grup">
                                 <label for="categoria_id">Categoria</label>
-                                <select class="sel" name="categoria_id" id="#" required>
+                                <select class="sel" name="categoria_id" required>
                                     <option value="">Selecione...</option>
                                     <?php
                                         $sql = $conexao->query("SELECT * FROM tb_categorias ORDER BY id DESC");
