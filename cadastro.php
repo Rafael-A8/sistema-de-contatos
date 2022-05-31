@@ -25,7 +25,18 @@
                             </div>
                             </br>
                             <div class="caixa-grup">
-                                <select class="sel" name="#" id="#" required>
+                                <label for="rg">R.G</label>
+                                <input type="text" name="rg" size="20" placeholder="Digite seu R.G" required>
+                            </div>
+                            </br>
+                            <div class="caixa-grup">
+                                <label for="cpf">CPF</label>
+                                <input type="text" name="cpf" max="20" placeholder="Digite seu CPF" required>
+                            </div>
+                            </br>
+                            <div class="caixa-grup">
+                                <label for="categoria_id">Categoria</label>
+                                <select class="sel" name="categoria_id" id="#" required>
                                     <option value="">Selecione...</option>
                                     <?php
                                         $sql = $conexao->query("SELECT * FROM tb_categorias ORDER BY id DESC");
@@ -33,7 +44,7 @@
                                         
                                         foreach ($select as $row) {
                                         ?>
-                                            <option><?php echo $row['cat_nome'] ?></option>
+                                            <option value="<?php echo $row['id'] ?>"><?php echo $row['cat_nome'] ?></option>
                                         <?php
                                         }
                                        ?>

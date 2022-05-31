@@ -1,6 +1,6 @@
 <?php
 include('includes/conexao.php');
-
+//CONSULTANDO OU SELECIONANDO INFORMAÇÃO NO BANCO DE DADOS NA TABELA 
 $sql = $conexao->query("SELECT * FROM tb_categorias ORDER BY id DESC");
 $result = $sql->fetchAll();
 

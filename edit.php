@@ -44,8 +44,19 @@ if(!empty($_GET['id']))
                     <input type="number" name="phone" value="<?php echo $result['phone']?>" placeholder="Digite seu nome" required>
                 </div>
                 </br>
+                <div class="caixa-grup">
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" value="<?php echo $result['cpf']?>" placeholder="Digite seu nome" required>
+                </div>
+                </br>
+                <div class="caixa-grup">
+                    <label for="rg">R.G</label>
+                    <input type="text" name="rg" value="<?php echo $result['rg']?>" placeholder="Digite seu nome" required>
+                </div>
+                </br>
                 <div class="">
-                <select name="#" id="#" required>
+                Categoria
+                <select class="form-control" name="categoria_id" id="#" required>
                     <option value="">Selecione...</option>
                     <?php
                         $sql = $conexao->query("SELECT * FROM tb_categorias ORDER BY id DESC");
@@ -53,7 +64,8 @@ if(!empty($_GET['id']))
                         
                         foreach ($select as $row) {
                         ?>
-                            <option><?php echo $row['cat_nome'] ?></option>
+                            <!--Se o id for igual Categoria que vem do banco de dados, dar selected nele-->
+                            <option <?php if($row['id'] == $result['categoria_id']) echo 'selected'; ?> value="<?php echo $row['id'] ?>"><?php echo $row['cat_nome'] ?></option>
                         <?php
                         }
                         ?>

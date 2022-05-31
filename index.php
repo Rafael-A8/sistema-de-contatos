@@ -2,7 +2,8 @@
 //Rafael Alvarino
 include('includes/conexao.php');
 
-$sql = $conexao->query("SELECT * FROM tb_usuarios AS U INNER JOIN tb_categorias AS C ON U.categoria_id = C.id");
+$sql = $conexao->query("SELECT U.*, C.cat_nome FROM tb_usuarios AS U
+                        INNER JOIN tb_categorias AS C ON U.categoria_id = C.id");
 $user = $sql->fetchAll();
 
 ?>
@@ -19,6 +20,8 @@ $user = $sql->fetchAll();
           <th scope="col">Nome</th>
           <th scope="col">E-amil</th>
           <th scope="col">Telefone</th>
+          <th scope="col">CPF</th>
+          <th scope="col">RG</th>
           <th scope="col">Categ</th>
           <th scope="col">Alteraçoes</th>
         </tr>
@@ -32,6 +35,8 @@ $user = $sql->fetchAll();
             <td><?php echo $row['nome'] ?></td>
             <td><?php echo $row['email'] ?></td>
             <td><?php echo $row['phone'] ?></td>
+            <td><?php echo $row['cpf'] ?></td>
+            <td><?php echo $row['rg'] ?></td>
             <td><?php echo $row['cat_nome'] ?></td>
             <td>
 

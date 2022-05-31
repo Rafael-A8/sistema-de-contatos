@@ -2,15 +2,15 @@
 
 include('includes/conexao.php');
 
-    $nome = $_POST['nome'];
+    $cat_nome = $_POST['cat_nome'];
 
 $inserir = [
 
-    'nome' => $nome
+    'cat_nome' => $cat_nome
 
 ];
 
-    $sql ="INSERT INTO tb_categorias (nome) VALUE (:nome)";
+    $sql ="INSERT INTO tb_categorias (cat_nome) VALUE (:cat_nome)";
     $result = $conexao->prepare($sql);
 
     $result->execute($inserir);
